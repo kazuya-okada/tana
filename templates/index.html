@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+	<main>
+	    <div class="containar col-12">
+			<H3 class="text-secondary"><i class="fas fa-camera pr-1"></i>数量判定</H3>
+			<div class="row center-block text-center">
+				<div class="col-md-1"></div>
+				<div class="col-md-5 border d-flex align-items-center">
+					<form action="/result" id="form-predict" name="form-predict" method="POST" enctype="multipart/form-data" class="align-items-center">
+						<img id="img-prev" class="row col-md" />
+						<div class="custom-file align-items-center row">
+							<input type="file" id="image-upload" name="image-upload" accept=".jpg,.png,image/jpeg,image/png" class="cutom-file-input" required>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-5">
+    				<table class="table table-striped border">
+    					<thead>
+    						<tr>
+								<th>商品コード</th>
+								<th>商品</th>
+								<th>検出数量</th>
+							</tr>
+    					</thead>
+    					<tbody>
+    						<tr>
+								<td></td>
+								<td></td>
+    							<td></td>
+    						</tr>
+    						<tr>
+								<td></td>
+								<td></td>
+    							<td></td>
+    						</tr>
+    						<tr>
+								<td></td>
+								<td></td>
+    							<td></td>
+    						</tr>
+    					</tbody>
+    				</table>
+    			</div>
+				<div class="col-md-1"></div>
+    		</div>
+    		<br>
+    		<div class="row center-block text-center">
+    			<div class="col-12">
+					<div class="form-group">
+						<button type="submit" form="form-predict" class="btn btn-primary">数量判定 </button>
+					</div>
+    			</div>
+    		</div>
+        </div>
+	</main>
+
+{% endblock %}

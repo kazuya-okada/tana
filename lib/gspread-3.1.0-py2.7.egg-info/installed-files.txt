@@ -1,0 +1,17 @@
+..\gspread\__init__.py
+..\gspread\__init__.pyc
+..\gspread\client.py
+..\gspread\client.pyc
+..\gspread\exceptions.py
+..\gspread\exceptions.pyc
+..\gspread\models.py
+..\gspread\models.pyc
+..\gspread\urls.py
+..\gspread\urls.pyc
+..\gspread\utils.py
+..\gspread\utils.pyc
+PKG-INFO
+SOURCES.txt
+dependency_links.txt
+requires.txt
+top_level.txt

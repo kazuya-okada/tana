@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+	<main>
+	    <div class="containar col-12">
+			<H3 class="text-secondary"><i class="fas fa-camera pr-1"></i>数量判定</H3>
+			<div class="row center-block text-center">
+				<div class="col-md-1"></div>
+				<div class="col-md-5 border d-flex align-items-center">
+					<img src='{{result_image}}' class="img-fluid">
+				</div>
+				<div class="col-md-5">
+    				<table class="table table-striped border table-sm">
+    					<thead>
+    						<tr>
+								<th>商品コード</th>
+								<th>商品</th>
+								<th>検出数量</th>
+							</tr>
+    					</thead>
+    					<tbody>
+							{% for result in result_list %}
+    						<tr>
+								<td>
+									<div class="form-group">
+										<input type="text" name="product-code" form="form_regist" value="{{ result[0] }}" readonly style="border:none;background:none;" class="form-control col-md" required>
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+											<input type="text" name="product-name" form="form_regist" value="{{ result[1] }}" readonly style="border:none;background:none;" class="form-control col-md" required>
+										</div>
+									</td>
+    							<td class="text-right">
+									<div class="form-group">
+										<input type="number" name="detect-num" form="form_regist" value="{{ result[2] }}" class="form-control col-md text-right float-right input-sm" required>
+									</div>
+								</td>
+    						</tr>
+							{% endfor %}
+    					</tbody>
+    				</table>
+    			</div>
+				<div class="col-md-1"></div>
+    		</div>
+    		<br>
+    		<div class="row center-block text-center">
+    			<div class="col-12">
+					<form id="form_regist" action="/regist" method="post">
+						<input type="hidden" name="result-file-name" value="{{result_file_name}}">
+						<input type="hidden" name="predict-datetime" value="{{predict_datetime}}">
+						<button type="submit" class="btn btn-primary">結果登録</button>
+					</form>
+    			</div>
+    		</div>
+        </div>
+	</main>
+
+{% endblock %}
