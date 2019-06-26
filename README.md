@@ -12,6 +12,9 @@
 
 ## ファイル構成
  基本的にGAE & Flaskの構成に準ずる  
-  * lib 3rdParty package
-  * static css/javascriptファイル(Bootstrapファイル)
-  * templates htmlテンプレート
+  * lib
+    * 3rdParty package
+  * static
+    * css/javascriptファイル(Bootstrapファイル)
+  * templates
+    * htmlテンプレート
